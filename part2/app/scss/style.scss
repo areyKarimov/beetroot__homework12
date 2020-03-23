@@ -1,0 +1,14 @@
+@import url(../css/normalize.css),
+'variables',
+'components',
+'sections';
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+input {
+    outline: none;
+}

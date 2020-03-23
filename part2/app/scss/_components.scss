@@ -1,0 +1,144 @@
+.button {
+    background: $btn-bg;
+    padding: 13px 0;
+    width: 100%;
+    color: $light-text;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    border: 5px solid $btn-bg;
+    transition: all 0.3s ease-in;
+    &:hover {
+        background: $underline;
+        color: $light-text;
+    }
+}
+.checkbox {
+    position: relative;
+    margin: 20px 0 25px 0;
+    max-width: 170px;
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        & span {
+            width: 20px;
+            height: 20px;
+            background: $btn-bg;
+            border: 3px solid $btn-bg;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in;
+            & svg {
+                transition: opacity 0.3s ease-in;
+                opacity: 0;
+                width: 10px;
+                fill: $light-text;
+            }
+        }
+    }
+    &__check {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+        &:checked+.checkbox__text {
+            & span {
+                background: $btn-bg;
+                &:hover {
+                    border: 3px solid $btn-bg;
+                }
+                & svg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &:hover {
+        & .checkbox__text {
+            & span {
+                background: $underline;
+            }
+        }
+    }
+}
+.form {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    &-active {
+        display: flex;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        &:hover {
+            & .form__footer__link::before {
+                opacity: 0;
+                bottom: -10px;
+            }
+        }
+        &__link {
+            position: relative;
+            color: $light-text;
+            font-size: 11px;
+            font-weight: 300;
+            opacity: 0.5;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                left: 0;
+                height: 1px;
+                opacity: 1;
+                background: $light-text;
+                bottom: -4px;
+                transition: all 0.3s ease-in;
+            }
+            &:hover {
+                &::before {
+                    opacity: 1 !important;
+                    bottom: -4px !important;
+                }
+            }
+        }
+    }
+    &__nav {
+        position: relative;
+        z-index: 5;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    &__inner {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__input {
+            background: transparent;
+            border: 2px solid $input-border;
+            padding: 10px;
+            margin: 7px 0 0 0;
+            color: $light-text;
+            transition: all 0.3s ease-in;
+            &:invalid {
+                border: 2px solid $underline;
+            }
+            &-adition {
+                margin-bottom: 20px;
+            }
+            &:focus {
+                border: 2px solid $btn-bg;
+            }
+        }
+        &__name {
+            margin-top: 15px;
+            font-weight: 700;
+        }
+    }
+}

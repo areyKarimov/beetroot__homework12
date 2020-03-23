@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__header">
+                <h2 class="contact__title">Contact</h2>
+                <p class="contact__text">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
+            </div>
+            <form action="" class="form" id="form2">
+                <input type="text" name="name" class="form__name form__item" placeholder="Auskteez Tran" required pattern="^[a-zA-Z]{3,50}+$">
+                <input type="email" name="email" class="form__email form__item" placeholder="Your email..." required>
+                <input type="tel" name="tel" class="form__tel form__item" placeholder="Your phone number..." required pattern="[0-9]{11}">
+                <textarea name="comment" id="" cols="30" rows="10" class="form__message form__item" placeholder="Your messge..." required maxlength="600"></textarea>
+            </form>
+            <div class="contact__information">
+                <div class="contact__help">
+                    <p class="contact__address"><strong>ADDRESS</strong><br>123 City name, Street, City, Country</p>
+                    <p class="contact__email"><strong>EMAIL</strong><br>cahee@domain.com</p>
+                    <p class="contact__phone"><strong>PHONE</strong><br>+012 345 6789</p>
+                </div>
+                <input form="form2" type="submit" class="button button-contact" value="SEND" />
+            </div>
+        </div>
+        <div class="contact__img"><img src="img/contact/bg.jpg" alt="bg"></div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__rights">© 2015 Company. All right reserved.</p>
+            <a href="#header" class="logo logo-footer">Cahee</a>
+            <p class="footer__made">Made with <b>love</b> by Auskteez</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

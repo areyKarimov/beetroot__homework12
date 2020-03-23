@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="sign">
+        <div class="sign__nav">
+            <a class="sign__link sign__link-active" id="js-link1">Sign in</a>
+            <a class="sign__link" id="js-link2">Join us</a>
+            <span class="redline"></span>
+        </div>
+        <form action="" class="form form-active" id="js-form1" method="POST">
+            <div class="form__inner">
+                <span class="form__inner__name">Username</span>
+                <input data-id="Username" name="login" type="text" class="form__inner__input" required pattern="[A-Za-z0-9]{3,12}">
+                <span class="form__inner__name">Password</span>
+                <input data-id="Password" name="password" type="password" class="form__inner__input" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <div class="form__inner__checkbox checkbox">
+                    <input type="checkbox" name="keep signed" class="checkbox__check">
+                    <div class="checkbox__text">
+                        <span>
+                            <svg x="0px" y="0px" viewBox="0 0 329.954 329.954"  xml:space="preserve">
+                            <path id="XMLID_89_" d="M99.85,299.045c2.813,2.813,6.629,4.393,10.607,4.393c3.979,0,7.794-1.581,10.606-4.393L325.56,94.548
+                                c2.814-2.813,4.394-6.628,4.394-10.606c0-3.979-1.58-7.794-4.394-10.607l-42.427-42.426c-5.857-5.857-15.355-5.858-21.213,0
+                                L110.461,182.37l-42.428-42.428c-2.813-2.813-6.629-4.394-10.607-4.394s-7.793,1.581-10.606,4.394L4.393,182.369
+                                c-5.857,5.858-5.857,15.355,0,21.213L99.85,299.045z"/>
+                            </svg>
+                        </span>
+                        <p>Keep me signed in</p>
+                    </div>
+                </div>
+                <input type="submit" value="Sign in" class="button">
+            </div>
+            <div class="form__footer">
+                <a href="#" class="form__footer__link">Forgot password</a>
+                <a href="#" class="form__footer__link js-create">Create an account</a>
+            </div>
+        </form>
+
+
+        <form action="" class="form" id="js-form2" method="POST">
+            <div class="form__inner">
+                <span class="form__inner__name">Username</span>
+                <input data-id="Username" name="login" type="text" class="form__inner__input" required pattern="[A-Za-z0-9]{3,12}">
+                <span class="form__inner__name">Password</span>
+                <input data-id="Password" name="password" type="password" class="form__inner__input js-pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <span class="form__inner__name">Repeat password</span>
+                <input data-id="Repeat password" name="password" type="password" class="form__inner__input form__inner__input-adition js-passck" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input type="submit" value="Sign in" class="button js-button">
+            </div>
+        </form>
+        <script src="js/main.js"></script>
+    </section>
+
+</body>
+
+</html>
